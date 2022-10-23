@@ -21,7 +21,7 @@ function Shop() {
   return (
     <div>
       <h1>Shop</h1>
-      {products &&
+      {products.length &&
         products.map((product, i) => {
           return (
             <div key={i}>
