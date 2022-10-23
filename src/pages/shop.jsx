@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 function Shop() {
-  const [products, setProduct] = useState([]);
+  const [products, setProduct] = useState(null);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -15,7 +15,7 @@ function Shop() {
   return (
     <div>
       <h1>Shop</h1>
-      {products.length &&
+      {products &&
         products.map((product, i) => {
           return (
             <div key={i}>
