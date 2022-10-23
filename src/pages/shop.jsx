@@ -2,13 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 function Shop() {
-  const [products, setProduct] = useState([
-    {
-      title: "sausage",
-      price: 390.99,
-      count: 3,
-    },
-  ]);
+  const [products, setProduct] = useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
